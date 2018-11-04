@@ -10,7 +10,9 @@
 {
     let inputMuestra;
     let valor1, valor2;
-    let sumar, restar, multiplicar, dividir, nuevoValor;
+    let sumar, restar, multiplicar, dividir, nuevoValor, realizarOperacion, primerNumero;
+    let operacionActual = false;
+    let operacionPosterior = false;
 
 
     function iniciar() {
@@ -64,61 +66,81 @@
                 break;
             case "CE":
                 inputMuestra.value = 0;
+                valor1 = 0;
+                valor2 = 0;
+                break;
             case "+":
-                valor1 = inputMuestra.value;
-                sumar = true;
-                restar = false;
-                multiplicar = false;
-                dividir = false;
+            case "-":
+            case "X":
+            case "/":
+                if(!primerNumero){
+                    valor1 = inputMuestra.value;
+                    operacionPosterior = valor;
+                    primerNumero = true;
+                }
+                else{
+                    valor2 = inputMuestra.value;
+                    realizarOperacion = true;
+                    operacionActual = operacionPosterior;
+                    operacionPosterior = valor;
+                }     
+                asignarOperaciones(operacionActual);
+                console.log(operacionActual);
+                console.log(operacionPosterior);
+                console.log(realizarOperacion);
+                console.log(nuevoValor);
+                if(realizarOperacion && !nuevoValor)
+                    comprobarOperacion(inputMuestra.value);
                 nuevoValor = true;
+            break;
+            case "=":
+                if(operacionActual == false && operacionPosterior != "+" || operacionPosterior != "-" || operacionPosterior != "X" || operacionPosterior != "/")
+                    asignarOperaciones(operacionPosterior);
+                comprobarOperacion(inputMuestra.value);
+                nuevoValor = true;
+                break;
+        }
+    }
+
+    function comprobarOperacion(valor){
+        if (sumar || restar || multiplicar || dividir) {
+            valor2 = valor;
+            calcularOperacion();
+        }
+    }
+
+    function asignarOperaciones(valor){
+        sumar = false;
+        restar = false;
+        multiplicar = false;
+        dividir = false;
+        switch(valor){
+            case "+":
+                sumar = true;
                 break;
             case "-":
-                valor1 = inputMuestra.value;
-                sumar = false;
                 restar = true;
-                multiplicar = false;
-                dividir = false;
-                nuevoValor = true;
                 break;
             case "X":
-                valor1 = inputMuestra.value;
-                sumar = false;
-                restar = false;
                 multiplicar = true;
-                dividir = false;
-                nuevoValor = true;
                 break;
             case "/":
-                valor1 = inputMuestra.value;
-                sumar = false;
-                restar = false;
-                multiplicar = false;
                 dividir = true;
-                nuevoValor = true;
                 break;
-            case "=":
-                if ((sumar || restar || multiplicar || dividir) && !nuevoValor) {
-                    valor2 = inputMuestra.value;
-                    calcularOperacion();
-                }
         }
     }
 
     function calcularOperacion() {
         if (sumar) {
             inputMuestra.value = parseFloat(valor1) + parseFloat(valor2);
-            sumar = false;
         } else if (restar) {
             inputMuestra.value = valor1 - valor2;
-            restar = false;
         } else if (multiplicar) {
             inputMuestra.value = valor1 * valor2;
-            multiplicar = false;
         } else {
             inputMuestra.value = valor1 / valor2;
-            dividir = false;
         }
-        valor1 = 0;
+        valor1 = inputMuestra.value;
         valor2 = 0;
     }
 
