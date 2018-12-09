@@ -1,0 +1,87 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    background-image: url(../img/fondo.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+#header{
+    margin: 16px;
+    padding: 8px;
+    text-align: center;
+    border-radius: 16px;
+    background: url(../img/nave.png) left no-repeat,
+        url(../img/nave.png) right no-repeat;
+    background-size: 10% 100%;
+}
+#header a{
+    text-decoration: none;
+    color: white;
+}
+#header h1{
+    text-shadow: 2px 2px brown;
+}
+
+#header h2{
+    text-shadow: 2px 2px #3F51B5;
+}
+
+nav {
+    margin: 16px;
+    background-color: transparent;
+}
+nav ul{
+    list-style: none; 
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    
+    
+}
+nav li{
+    display: inline-block;
+    border-right: 1px solid white;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 0 64px;
+    display: block;
+    line-height: 50px;
+    margin: 0;
+    min-width: 100px;
+    background-color: brown;
+}
+nav a:hover{
+    background-color: rgba(255,255,255,0.6)
+}
+
+footer{
+    background-color: #3F51B5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin: 16px;
+}
+#redesSociales{
+    padding: 16px;
+}
+#derechos{
+    padding: 8px;
+}
+footer img{
+    height: 48px;
+    width: 48px;
+    margin: 8px;
+    transition-duration: 1s;
+}
+footer img:hover{
+    transition-duration: 1s;
+    transform: rotate(-360deg) scale(1.2);
+}
+#formulario{
+    text-align: center;
+}

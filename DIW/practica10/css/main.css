@@ -1,0 +1,152 @@
+#contenedorPrincipal{
+    display: flex;
+    margin: 8px;
+}
+main{
+    flex-basis: 80%;
+}
+aside{
+    flex-basis: 20%;
+}
+main section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,200px);
+    grid-template-areas: 
+            "articulo1 articulo1 articulo2 articulo3"
+            "articulo1 articulo1 articulo4 articulo4"
+            "articulo5 articulo6 articulo7 articulo8"
+            "articulo9 articulo9 articulo10 articulo11"
+            "articulo12 articulo13 articulo14 articulo14";
+            ;
+    grid-gap: 8px;
+}
+section a{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    transition-duration: 1s;
+}
+section a:hover p{
+    background-color: white;
+}
+section a:hover{
+    transition-duration: 1s;
+    transform: scale(0.9);
+}
+main section a{
+    border-radius: 8px;
+}
+article p{
+    background-color: rgba(255,255,255,0.6);
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: black;
+    border-bottom-left-radius: 8px; 
+    border-bottom-right-radius: 8px; 
+}
+#articulo1{
+    background-image: url(../img/articulo1.jpg);
+    grid-area: articulo1;
+}
+#articulo2{
+    background-image: url(../img/articulo2.jpg);
+    grid-area: articulo2;
+}
+#articulo3{
+    background-image: url(../img/articulo3.jpg);
+    grid-area: articulo3;
+}
+#articulo4{
+    background-image: url(../img/articulo4.jpg);
+    grid-area: articulo4;
+}
+#articulo5{
+    background-image: url(../img/articulo5.jpg);
+    grid-area: articulo5;
+}
+#articulo6{
+    background-image: url(../img/articulo6.jpg);
+    grid-area: articulo6;
+}
+#articulo7{
+    background-image: url(../img/articulo7.jpg);
+    grid-area: articulo7;
+}
+#articulo8{
+    background-image: url(../img/articulo8.jpg);
+    grid-area: articulo8;
+}
+#articulo9{
+    background-image: url(../img/articulo9.jpg);
+    grid-area: articulo9;
+}
+#articulo10{
+    background-image: url(../img/articulo10.jpg);
+    grid-area: articulo10;
+}
+#articulo11{
+    background-image: url(../img/articulo11.jpg);
+    grid-area: articulo11;
+}
+#articulo12{
+    background-image: url(../img/articulo12.jpg);
+    grid-area: articulo12;
+}
+#articulo13{
+    background-image: url(../img/articulo13.jpg);
+    grid-area: articulo13;
+}
+#articulo14{
+    background-image: url(../img/articulo14.jpg);
+    grid-area: articulo14;
+}
+aside div{
+    border-radius: 8px;
+}
+#loMasVisto li:hover a{
+    transform: scale(1.1);
+    color: black;
+}
+
+#quienSoy{
+    background-color: #3F51B5;
+    margin: 0 8px;
+    min-height: 200px;
+    text-align: center;
+    padding: 8px;
+}
+#loMasVisto{
+    background-color: brown;
+    padding: 8px;
+    margin: 8px;
+    min-height: 190px;
+}
+#loMasVisto header{
+    text-align: center;
+}
+#loMasVisto ol{
+    padding: 20px;
+}
+#loMasVisto li{
+    margin-bottom: 8px;
+}
+#loMasVisto a{
+    text-decoration: none;
+    color: white;
+}
+#encuesta{
+    padding: 8px;
+    margin: 0 8px;
+}
+canvas{
+    border-radius: 100px;
+}
+
+
