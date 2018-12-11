@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario completito</title>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+</head>
+
+<body>
+    <noscript>
+        Tienes JavaScript deshabilitado. Habilítelo para ver la página correctamente.
+    </noscript>
+    <h1>Formulario completito por José Rafael Álvarez Espino</h1>
+    <main>
+        <input type="text" id="inputNombre" placeholder="Nombre"><br>
+        <span id="errorNombre"></span><br>
+
+        <input type="number" id="inputEdad" placeholder="Edad"><br>
+        <span id="errorEdad"></span>
+
+        <div id="inputSexo">
+            <p id="parrafoSexo">Sexo</p>
+            <input type="radio" name="sexo" value="Hombre"> Hombre
+            <input type="radio" name="sexo" value="Mujer"> Mujer<br>
+            <span id="errorSexo"></span>
+        </div>
+
+        <input type="text" id="inputDNI" placeholder="DNI"><br>
+        <span id="errorDNI"></span><br>
+
+        <input type="email" id="inputCorreo" placeholder="Correo electrónico"><br>
+        <span id="errorCorreo"></span><br>
+
+        <p id="spanFechaNacimiento"></p>
+        <input type="text" id="inputFechaNacimiento" placeholder="Fecha de Nacimiento"><br>
+        <span id="errorFechaNacimiento"></span><br>
+
+        <input type="number" id="inputTelefono" placeholder="Teléfono"><br>
+        <span id="errorTelefono"></span><br>
+
+        <input type="text" id="inputCuentaCorriente" placeholder="Cuenta corriente"><br>
+        <span id="errorCuentaCorriente"></span><br>
+
+        <input type="text" id="inputDireccionWeb" placeholder="Dirección web"><br>
+        <span id="errorDireccionWeb"></span><br>
+
+        <button id="enviar">Enviar</button>
+    </main>
+</body>
+
+</html>
