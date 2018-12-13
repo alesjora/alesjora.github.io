@@ -1,22 +1,10 @@
 {
-    // let inputNombre;
-    // let errorNombre;
-    // let inputEdad;
-    // let errorEdad;
-
-    // let errorSexo;
-    // let inputDNI;
-    // let errorDNI;
-    // let inputCorreo;
-    // let errorCorreo;
-    // let inputFechaNacimiento;
-    // let errorFechaNacimiento;
-    // let inputTelefono;
-    // let errorTelefono;
-    // let inputCuentaCorriente;
-    // let errorCuentaCorriente;
-    // let inputDireccionWeb;
-    // let errorDireccionWeb;
+    let enviar;
+    let inputs = [];
+    let spans;
+    let checkBox;
+    let inputsErroneos = [];
+    let collectionSpan = new Map();
 
     let patrones = {
         nombre: [
@@ -49,20 +37,15 @@
             "La cuenta corriente contiene 20 números, pueden ser seguidos o del formato: xxxx-xxxx-xx-xxxxxxxxxx / xxxx xxxx xx xxxxxxxxxx"
         ],
         direccionWeb: [
-            /^http[s]?\:\/{2}[a-z0-9\.-]+\.[a-z]{2,}/gi,
+            /http[s]?:\/\/[\w]+([\.]+[\w]+)+/,
             "Error, formato correcto: https://www.google.es o http://www.google.es"
         ]
     };
 
     let tester = {
-        validarNombre(nombre) {
-            if (!patrones.nombre[0].test(nombre))
-                return patrones.nombre[1];
-            return "";
-        },
-        validadEdad(edad){
-            if (edad < 1 || !patrones.edad[0].test(edad))
-                return patrones.edad[1];
+        expresionRegular(texto,patron){
+            if (!patrones[patron][0].test(texto))
+                return patrones[patron][1];
             return "";
         },
         validarDNI(dni){
@@ -74,31 +57,6 @@
                     return "Letra incorrecta";
                 return "";
             }
-        },
-        validarEmail(email){
-            if (!patrones.email[0].test(email))
-                return patrones.email[1];
-            return "";
-        },
-        validarFechaNacimiento(fechaNacimiento){
-            if (!patrones.fecha[0].test(fechaNacimiento))
-                return patrones.fecha[1];
-            return "";
-        },
-        validarTelefono(telefono){
-            if (!patrones.telefono[0].test(telefono))
-                return patrones.telefono[1];
-            return "";
-        },
-        validarCuentaCorriente(cuentaCorriente){
-            if (!patrones.cuentaCorriente[0].test(cuentaCorriente))
-                return patrones.cuentaCorriente[1];
-            return "";
-        },
-        validarDireccionWeb(direccionWeb){
-            if (!patrones.direccionWeb[0].test(direccionWeb))
-                return patrones.direccionWeb[1];
-            return "";
         },
         validarSexo(sexos){
             let seleccionado;
@@ -114,81 +72,66 @@
     }
 
     function init() {
-        //Entrada de datos
-        let inputNombre = document.getElementById("inputNombre");
-        let inputEdad = document.getElementById("inputEdad");
-        let radioButtonSexo = document.getElementsByTagName("sexo");
-        let inputDNI = document.getElementById("inputDNI");
-        let inputCorreo = document.getElementById("inputCorreo");
-        let inputFechaNacimiento = document.getElementById("inputFechaNacimiento");
-        let inputTelefono = document.getElementById("inputTelefono");
-        let inputCuentaCorriente = document.getElementById("inputCuentaCorriente");
-        let inputDireccionWeb = document.getElementById("inputDireccionWeb");
-        let inputEnviar = document.getElementById("enviar");
-
-        //Salida de información
-        let errorNombre = document.getElementById("errorNombre");
-        let errorEdad = document.getElementById("errorEdad");
-        let errorSexo = document.getElementById("errorSexo");
-        let errorDNI = document.getElementById("errorDNI");
-        let errorCorreo = document.getElementById("errorCorreo");
-        let errorFechaNacimiento = document.getElementById("errorFechaNacimiento");
-        let errorTelefono = document.getElementById("errorTelefono");
-        let errorCuentaCorriente = document.getElementById("errorCuentaCorriente");
-        let errorDireccionWeb = document.getElementById("errorDireccionWeb");
-
-        //Asignamos los eventos a las funciones
-        inputNombre.addEventListener("blur", validarNombre.bind(null,inputNombre,errorNombre));
-        inputEdad.addEventListener("blur", validarEdad.bind(null,inputEdad,errorEdad));
-        inputDNI.addEventListener("blur", validarDNI.bind(null,inputDNI,errorDNI));
-        inputCorreo.addEventListener("blur", validarEmail.bind(null,inputCorreo,errorCorreo));
-        inputFechaNacimiento.addEventListener("blur", validarFechaNacimiento.bind(null,inputFechaNacimiento,errorFechaNacimiento));
-        inputTelefono.addEventListener("blur", validarTelefono.bind(null,inputTelefono,errorTelefono));
-        inputCuentaCorriente.addEventListener("blur", validarCuentaCorriente.bind(null,inputCuentaCorriente,errorCuentaCorriente));
-        inputDireccionWeb.addEventListener("blur", validarDireccionWeb.bind(null,inputDireccionWeb,errorDireccionWeb));
-        inputEnviar.addEventListener("click",comprobarTodo.bind(null,inputNombre,errorNombre,inputEdad,errorEdad,radioButtonSexo,errorSexo,inputDNI,errorDNI,
-            inputCorreo,errorCorreo,inputFechaNacimiento,errorFechaNacimiento,inputTelefono,errorTelefono,inputCuentaCorriente,errorCuentaCorriente,inputDireccionWeb,errorDireccionWeb
-            ));
+        spans = document.getElementsByTagName("span");
+        for(elemento of spans){
+            collectionSpan.set(elemento.id, elemento);
+        }
+        inputs = document.querySelectorAll("input[type='text']");
+        checkBox = document.getElementById("terminos");
+        for(elemento of inputs){
+            elemento.addEventListener("blur",validarInput.bind(null,elemento,collectionSpan.get("error"+elemento.id)));
+        }
+        document.getElementById("enviar").addEventListener("click",comprobarTodo);
     }
 
-    function validarNombre(nombre, errorNombre) {
-        errorNombre.textContent = tester.validarNombre(nombre.value);
-    }
-    function validarEdad(edad, errorEdad) {
-        errorEdad.textContent = tester.validadEdad(edad.value);
-    }
-    function validarDNI(dni, errorDNI) {
-        errorDNI.textContent = tester.validarDNI(dni.value);
-    }
-    function validarEmail(email, errorEmail) {
-        errorEmail.textContent = tester.validarEmail(email.value);
-    }
-    function validarFechaNacimiento(fechaNacimiento, errorFechaNacimiento) {
-        errorFechaNacimiento.textContent = tester.validarFechaNacimiento(fechaNacimiento.value);
-    }
-    function validarTelefono(telefono, errorTelefono) {
-        errorTelefono.textContent = tester.validarTelefono(telefono.value);
-    }
-    function validarCuentaCorriente(cuentaCorriente, errorCuentaCorriente) {
-        errorCuentaCorriente.textContent = tester.validarCuentaCorriente(cuentaCorriente.value);
-    }
-    function validarDireccionWeb(direccionWeb, errorDireccionWeb) {
-        errorDireccionWeb.textContent = tester.validarDireccionWeb(direccionWeb.value);
-    }
-    function validarSexo(radioButtonSexo, errorSexo){
-        errorSexo.textContent = tester.validarSexo(radioButtonSexo);
-    }
-    function comprobarTodo(inputNombre,errorNombre,inputEdad,errorEdad,radioButtonSexo, errorSexo, inputDNI,errorDNI,inputCorreo,errorCorreo,inputFechaNacimiento,errorFechaNacimiento,inputTelefono,errorTelefono,inputCuentaCorriente,errorCuentaCorriente,inputDireccionWeb,errorDireccionWeb){
-        validarNombre(inputNombre,errorNombre);
-        validarEdad(inputEdad,errorEdad);
-        validarSexo(radioButtonSexo,errorSexo);
-        validarDNI(inputDNI,errorDNI);
-        validarEmail(inputCorreo,errorCorreo);
-        validarFechaNacimiento(inputFechaNacimiento,errorFechaNacimiento);
-        validarTelefono(inputTelefono,errorTelefono);
-        validarCuentaCorriente(inputCuentaCorriente,errorCuentaCorriente);
-        validarDireccionWeb(inputDireccionWeb,errorDireccionWeb);
+    function validarInput(input,span){
+        if(input.id == "DNI")
+            span.textContent = tester.validarDNI(input.value);
+        else
+            span.textContent = tester.expresionRegular(input.value,input.getAttribute("expresion"));
+        if(span.textContent !== "")
+            inputsErroneos.push(input);
     }
 
+    function validarRadioButton(){
+        if(!document.querySelector("input[name='sexo']:checked"))
+            collectionSpan.get("errorsexo").textContent = "Debes de seleccionar un sexo";
+        else
+            collectionSpan.get("errorsexo").textContent = "";
+    }
+
+    function validarCheckBox(){
+        if(!checkBox.checked)
+            collectionSpan.get("errorterminos").textContent = "Debes de aceptar los términos y condiciones";
+        else
+            collectionSpan.get("errorterminos").textContent = "";
+    }
+
+    function comprobarTodo(){
+        inputsErroneos = []
+        for(elemento of inputs)
+            validarInput(elemento,collectionSpan.get("error"+elemento.id));
+        validarRadioButton();
+        validarCheckBox();
+        chequear();
+
+    }
+
+    function chequear(){
+        if(inputsErroneos.length != 0)
+            inputsErroneos[0].focus();
+        else
+            limpiarTodo();
+    }
+
+    function limpiarTodo(){
+        for(elemento of inputs){
+            elemento.value = "";
+            collectionSpan.get("error"+elemento.id).textContent = "";
+        }
+    }
     window.addEventListener("load", init);
 }
+
+
+    
