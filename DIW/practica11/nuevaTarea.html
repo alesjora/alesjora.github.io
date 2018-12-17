@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Práctica 11. José Rafael Álvarez Espino</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/main.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html">
+                <h1>Gestor de tareas</h1>
+            </a>
+            <a href="#" id="abrirMenu"><i class="material-icons">menu</i></a>
+        </div>
+        <nav>
+            <ul class="topnav" id="myTopnav">
+                <li><a href="#">DWEC</a></li>
+                <li><a href="#">HLC</a></li>
+                <li><a href="#">DAW</a></li>
+                <li><a href="#">DWES</a></li>
+                <li><a href="#">DIW</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Añadir nueva tarea</h2>
+            <form action="">
+                <input type="text" placeholder="Nombre de la tarea"><br>
+                <select>
+                    <option value="" disabled selected>Selecciona la asignatura</option>
+                    <option value="DWEC">DWEC</option>
+                    <option value="HLC">HLC</option>
+                    <option value="DAW">DAW</option>
+                    <option value="DWES">DWES</option>
+                    <option value="DIW">DIW</option>
+                </select><br>
+                <input type="date" placeholder="Fecha de entrega"><br>
+                <textarea rows="4" cols="20" placeholder="Escribe una breve descripción sobre la tarea."></textarea>
+                <input type="submit" id="enviar" value="Añadir tarea">
+            </form>
+        </section>
+    </main>
+    <footer id="footer">
+        <div id="informacion">
+            <p>Gestor de tareas Ⓒ 2018.</p>
+            <p>José Rafael Álvarez Espino.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
