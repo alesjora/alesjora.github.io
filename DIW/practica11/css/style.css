@@ -45,7 +45,6 @@ nav ul li a {
     position: sticky;
     top: 0;
     z-index: 1;
-    left: 130px;
 }
 
 #nuevaTarea a {
@@ -56,6 +55,12 @@ nav ul li a {
     margin: 8px;
     color: white;
     text-decoration: none;
+    transition: 0.5s;
+}
+
+#nuevaTarea a:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 form{
@@ -71,26 +76,26 @@ article {
 }
 
 article > div,
-#pie {
+.pie {
     display: flex;
     justify-content: space-between;
 }
 
-#descripcion {
+.descripcion {
     margin-bottom: 30px;
 }
 
-#pie{
+.pie{
     position: absolute;
     bottom: 0;
     width: 95%;
 }
 
-#pie div a i {
+.pie div a i {
     color: white;
 }
 
-#pie div p {
+.pie div p {
     margin: 0px;
 }
 
@@ -101,7 +106,7 @@ article:hover{
 
 
 
-#modificarYBorrar a:hover i{
+.modificarYBorrar a:hover i{
     transform: rotate(-360deg);
     transition: 0.5s;
 }
@@ -169,7 +174,7 @@ textarea:valid{
 select:valid{
     border: 1px solid green;
 }
-input:placeholder-shown,textarea:placeholder-shown{
+input:placeholder-shown{
     box-shadow: 2px 2px red;
 }
 label{
