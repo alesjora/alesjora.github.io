@@ -34,23 +34,22 @@
     </header>
 
     <main>
-        <section>
-            <h2>Añadir nueva tarea</h2>
-            <form action="">
-                <input type="text" placeholder="Nombre de la tarea"><br>
-                <select>
-                    <option value="" disabled selected>Selecciona la asignatura</option>
-                    <option value="DWEC">DWEC</option>
-                    <option value="HLC">HLC</option>
-                    <option value="DAW">DAW</option>
-                    <option value="DWES">DWES</option>
-                    <option value="DIW">DIW</option>
-                </select><br>
-                <input type="date" placeholder="Fecha de entrega"><br>
-                <textarea rows="4" cols="20" placeholder="Escribe una breve descripción sobre la tarea."></textarea>
-                <input type="submit" id="enviar" value="Añadir tarea">
-            </form>
-        </section>
+        <h2>Añadir nueva tarea</h2>
+        <form action="">
+            <input type="text" placeholder=" Nombre de la tarea" required><br>
+            <select required>
+                <option value="" disabled selected>Selecciona la asignatura</option>
+                <option value="DWEC">DWEC</option>
+                <option value="HLC">HLC</option>
+                <option value="DAW">DAW</option>
+                <option value="DWES">DWES</option>
+                <option value="DIW">DIW</option>
+            </select><br>
+            <label for="date">Fecha de entrega</label><br>
+            <input type="date" placeholder="Fecha de entrega" required><br>
+            <textarea rows="4" cols="20" placeholder="Escribe una breve descripción sobre la tarea." required></textarea>
+            <input type="submit" id="enviar" value="Añadir tarea">
+        </form>
     </main>
     <footer id="footer">
         <div id="informacion">

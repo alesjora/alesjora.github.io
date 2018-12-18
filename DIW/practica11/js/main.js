@@ -14,7 +14,7 @@
             myTopnav.className += "responsive";
         else
             myTopnav.className = "topnav";
-        console.log(myTopnav.className);
+
     }
 
 }

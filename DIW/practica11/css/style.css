@@ -4,10 +4,7 @@ body {
 }
 
 header {
-    overflow: hidden;
     background-color: #F44336;
-    min-height: 55px;
-    
 }
 
 header>a {
@@ -31,6 +28,9 @@ header > div i{
 header > div a{
     text-decoration: none;
     color: white;
+}
+nav{
+    padding: 4px;
 }
 nav ul li a {
     color: #f2f2f2;
@@ -58,15 +58,20 @@ nav ul li a {
     text-decoration: none;
 }
 
+form{
+    height: 45vh;
+}
+
 article {
     margin: 12px;
     padding: 12px;
     background-color: #777;
     position: relative;
+    transition: 0.5s;
 }
 
 article > div,
-footer {
+#pie {
     display: flex;
     justify-content: space-between;
 }
@@ -75,26 +80,38 @@ footer {
     margin-bottom: 30px;
 }
 
-article footer {
+#pie{
     position: absolute;
     bottom: 0;
     width: 95%;
 }
 
-article footer div a i {
+#pie div a i {
     color: white;
 }
 
-article footer div p {
+#pie div p {
     margin: 0px;
 }
 
-#footer {
+article:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+
+
+#modificarYBorrar a:hover i{
+    transform: rotate(-360deg);
+    transition: 0.5s;
+}
+
+footer {
     background-color: #F44336;
     padding: 12px;
 }
 
-#footer div img {
+footer div img {
     width: 32px;
     height: 32px;
 }
@@ -103,14 +120,17 @@ nav ul li{
     display: none;
 }
 
-.topnavresponsive {
+.topnavresponsive{
     position: relative;
+    padding: 0;
+    
 }
 
 .topnavresponsive li{
-    margin: 20px;
+    margin: 8px;
     display: block;
     text-align: center;
+    border: 1px solid white;
 }
 
 h2 {
@@ -131,9 +151,34 @@ textarea {
     margin: 8px;
 }
 
+input[type=text]:invalid,input[type=date]:invalid{
+    border: 1px solid red;
+}
+textarea:invalid{
+    border: 1px solid red;
+}
+select:invalid{
+    border: 1px solid red;
+}
+input[type=text],input[type=date]:valid{
+    border: 1px solid green;
+}
+textarea:valid{
+    border: 1px solid green;
+}
+select:valid{
+    border: 1px solid green;
+}
+input:placeholder-shown,textarea:placeholder-shown{
+    box-shadow: 2px 2px red;
+}
+label{
+    color: black;
+}
 
-@media screen and (max-width:1024px) and (min-width:640px) {
-    #mainPrincipal section {
+
+@media screen and (max-width:1024px) and (min-width:600px) {
+    main section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -153,7 +198,11 @@ textarea {
     #abrirMenu{
         display: none;
     }
-    #mainPrincipal section {
+    .topnavresponsive li {
+        display: inline-block;
+        border: none;
+    }
+    main section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
