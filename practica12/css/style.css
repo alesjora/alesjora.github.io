@@ -1,0 +1,228 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+#principal{
+    background-image: url("../img/imagenPrincipal.jpg");
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    overflow: auto;
+}
+#principal>img{
+    height: 32px;
+    width: 32px;
+}
+header>a {
+    text-decoration: none;
+}
+
+header h1 {
+    color: white;
+    margin-left: 8px;
+}
+
+header > div{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+header > div i{
+    margin-top: 30px;
+    margin-right: 8px;
+}
+header > div a{
+    text-decoration: none;
+    color: white;
+}
+nav{
+    padding: 4px;
+}
+nav ul li a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+main{
+    color: black;
+    text-align: center;
+}
+#masVisitados div{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,200px);
+}
+#masVisitados div a{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    margin: 8px;
+}
+#masVisitados div a p{
+    background-color: rgba(255,255,255,0.6);
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: black;
+}
+#lugar1{
+    background-image: url("../img/sierraCazorla.jpg");
+}
+#lugar2{
+    background-image: url("../img/sierraNevada.jpg");
+}
+#lugar3{
+    background-image: url("../img/puentedey.jpg");
+}
+#lugar4{
+    background-image: url("../img/torla.jpg");
+}
+#masValoradas>div{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,300px);
+}
+.casa{
+    color: black;
+    text-decoration: none;
+    margin: 8px;
+    border: 1px solid gray;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.14);
+}
+.imagenCasa{
+    height: 140px;
+}
+.imagenCasa img{
+    height: 140px;
+    width: 100%;
+}
+.informacionCasa{
+    height: 130px;
+    text-align: justify;
+    padding: 8px;
+}
+.informacionCasa p{
+    margin: 12px;
+}
+.nombreCasa{
+    font-size: 18px;
+    font-weight: bold;
+    color: orangered;
+}
+.localizacionCasa{
+    font-size: 14px;
+    font-weight: bold;
+}
+.capacidadCasa{
+    font-size: 14px;
+}
+.precioCasa{
+    font-size: 14px;
+}
+.pie{
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+}
+
+.pie div a i {
+    color: white;
+}
+
+.pie div p {
+    margin: 0px;
+}
+
+
+
+footer {
+    background-color: orangered;
+    padding: 12px;
+}
+
+nav ul li{
+    display: none;
+}
+
+.topnavresponsive{
+    position: relative;
+    padding: 0;
+    
+}
+
+.topnavresponsive li{
+    margin: 8px;
+    display: block;
+    text-align: center;
+    border: 1px solid white;
+}
+
+form {
+    margin: 8px auto;
+    text-align: center;
+    padding: 8px;
+}
+form #fechaEntrada::before{
+    content: "Fecha entrada: \0000a0";
+}
+form #fechaSalida::before{
+    content: "Fecha salida: \0000a0";
+}
+form input{
+    width: 90%;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+
+@media screen and (max-width:1024px) and (min-width:600px) {
+    #masVisitados div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,200px);
+    }
+    #masValoradas>div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,300px);
+    }
+}
+
+@media screen and (min-width:1024px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    #abrirMenu{
+        display: none;
+    }
+    .topnavresponsive li {
+        display: inline-block;
+        border: none;
+    }
+    #masVisitados div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,200px);
+    }
+    #masValoradas>div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,300px);
+    }
+
+    nav ul li{
+        display: inline-block
+    }
+}
