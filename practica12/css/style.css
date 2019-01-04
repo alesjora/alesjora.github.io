@@ -61,6 +61,7 @@ main{
     background-size: 100% 100%;
     position: relative;
     margin: 8px;
+    border-radius: 8px;
 }
 #masVisitados div a p{
     background-color: rgba(255,255,255,0.6);
@@ -73,6 +74,8 @@ main{
     padding-top: 8px;
     padding-bottom: 8px;
     color: black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 #lugar1{
     background-image: url("../img/sierraCazorla.jpg");
@@ -89,7 +92,7 @@ main{
 #masValoradas>div{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4,300px);
+    grid-template-rows: repeat(4,390px);
 }
 .casa{
     color: black;
@@ -97,25 +100,28 @@ main{
     margin: 8px;
     border: 1px solid gray;
     box-shadow: 0 4px 8px rgba(0,0,0,0.14);
+    border-radius: 8px;
 }
 .imagenCasa{
-    height: 140px;
+    height: 200px;
+    
 }
 .imagenCasa img{
-    height: 140px;
+    height: 195px;
     width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 .informacionCasa{
-    height: 130px;
+    height: 190px;
     text-align: justify;
-    padding: 8px;
+    position: relative;
 }
 .informacionCasa p{
     margin: 12px;
 }
 .nombreCasa{
-    font-size: 18px;
-    font-weight: bold;
+    margin: 12px;
     color: orangered;
 }
 .localizacionCasa{
@@ -127,6 +133,17 @@ main{
 }
 .precioCasa{
     font-size: 14px;
+}
+.valoracionCasa{
+    font-size: 14px;
+    display: inline;
+    position: absolute;
+    right: 8px;
+}
+.inline-icon{
+    vertical-align: bottom;
+    font-size: 15px !important;
+    width: 14px;
 }
 .pie{
     position: absolute;
@@ -145,7 +162,7 @@ main{
 
 
 footer {
-    background-color: orangered;
+    background-color: hsl(16, 100%, 50%);
     padding: 12px;
 }
 
@@ -178,11 +195,12 @@ form #fechaSalida::before{
     content: "Fecha salida: \0000a0";
 }
 form input{
-    width: 90%;
+    width: 88%;
     margin: 8px;
     padding: 8px;
     border-radius: 5px;
 }
+
 
 
 
@@ -195,7 +213,16 @@ form input{
     #masValoradas>div{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,300px);
+        grid-template-rows: repeat(2,390px);
+    }
+    #formularioBusqueda form{
+        background-color: white;
+        margin: 12px auto;
+        border-radius: 8px;
+        width: 400px;
+    }
+    input[type="text"],input[type="date"],input[type="number"],input[type="submit"]{
+        width: 300px;
     }
 }
 
@@ -219,10 +246,18 @@ form input{
     #masValoradas>div{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,300px);
+        grid-template-rows: repeat(2,390px);
     }
-
     nav ul li{
         display: inline-block
+    }
+    #formularioBusqueda form{
+        background-color: white;
+        margin: 40px auto;
+        border-radius: 8px;
+        width: 450px;
+    }
+    input[type="text"],input[type="date"],input[type="number"],input[type="submit"]{
+        width: 350px;
     }
 }

@@ -16,7 +16,6 @@
     function funcionResponsive() {
         if (myTopnav.className === "topnav") {
             myTopnav.className += "responsive";
-            // myHeader.style.backgroundColor = "gray";
         } else {
             myTopnav.className = "topnav";
             myHeader.style.backgroundColor = "transparent";
