@@ -24,7 +24,7 @@
         $("#flechaAbajo").click(function () {
             $('html,body').animate({
                 scrollTop: $("main").offset().top
-            }, 500);
+            }, 1000);
         });
     
     });

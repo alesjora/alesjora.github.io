@@ -34,28 +34,35 @@
         </nav>
     </header>
     <main>
-        <div id="imagenes">
-            <img src="img/casaRural1.jpg" alt="Casa rural primorias">
+        <div id="parteSuperior">
+            <div id="imagenes">
+                <img src="img/casaRural1.jpg" alt="Casa rural primorias">
+            </div>
+            <div id="botoneraDesktop">
+                <button>Solicitar reserva</button>
+            </div>
+            <div id="informacionPrincipalIconos">
+                <div id="informacionPrincipal">
+                    <h3 class="nombreCasa">Casa rural Primorias.</h3>
+                    <p class="localizacionCasa">Riaza, Segovia.</p>
+                    <p class="precioCasa">22€ por persona/noche.</p>
+                </div>
+                <div id="informacionIconos">
+                    <img src="img/casa.svg" alt="casa">
+                    <img src="img/capacidad.svg" alt="capacidad">
+                    <img src="img/dormitorios.svg" alt="dormitorios">
+                    <img src="img/cama.svg" alt="camas">
+                    <p>Alquiler completo</p>
+                    <p>12 personas</p>
+                    <p>6 dormitorios</p>
+                    <p>10 camas</p>
+                </div>
+            </div>
         </div>
-        <div id="botonera">
+        <div id="botoneraMovil">
             <button>Solicitar reserva</button>
             <button><i class="inline-icon material-icons">phone</i></button>
             <button><i class="inline-icon material-icons">favorite</i></button>
-        </div>
-        <div id="informacionPrincipal">
-            <h3 class="nombreCasa">Casa rural Primorias.</h3>
-            <p class="localizacionCasa">Riaza, Segovia.</p>
-            <p class="precioCasa">22€ por persona/noche.</p>
-        </div>
-        <div id="informacionIconos">
-            <img src="img/casa.svg" alt="casa">
-            <img src="img/capacidad.svg" alt="capacidad">
-            <img src="img/dormitorios.svg" alt="dormitorios">
-            <img src="img/cama.svg" alt="camas">
-            <p>Alquiler completo</p>
-            <p>12 personas</p>
-            <p>6 dormitorios</p>
-            <p>10 camas</p>
         </div>
         <div id="informacionResumida">
             <h3>Resumen</h3>
@@ -108,17 +115,20 @@
                 <li>Ermita de San Roque.</li>
             </ul>
         </div>
-        <div id="localizacionCasaMapa">
-                <h3>Localización</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11286.400667172626!2d-4.387285126352057!3d37.457926151973474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6d9defead2892d%3A0x46b5dc91cfdd971e!2sYacimiento+arqueol%C3%B3gico+del+Cerro+de+la+Merced!5e0!3m2!1ses!2ses!4v1546778939343" allowfullscreen></iframe>
-            </div>
     </main>
-    <aside id="contactoPropietario">
-        <h3>Contacta con el propietario</h3>
-        <div>
-            <img src="img/perfil.png" alt="imagenPerfil">
-            <p>Enrique Adebayor Prieto</p>
-            <button>Contactar</button>
+    <aside>
+        <div id="localizacionCasaMapa">
+            <h3>Localización</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11286.400667172626!2d-4.387285126352057!3d37.457926151973474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6d9defead2892d%3A0x46b5dc91cfdd971e!2sYacimiento+arqueol%C3%B3gico+del+Cerro+de+la+Merced!5e0!3m2!1ses!2ses!4v1546778939343"
+                allowfullscreen></iframe>
+        </div>
+        <div id="contactoPropietario">
+            <h3>Contacta con el propietario</h3>
+            <div>
+                <img src="img/perfil.png" alt="imagenPerfil">
+                <p>Enrique Adebayor Prieto</p>
+                <button>Contactar</button>
+            </div>
         </div>
     </aside>
     <div id="comentarios">
@@ -165,6 +175,10 @@
             </div>
         </div>
     </div>
+    <footer>
+        <p>Portal de casas rurales Ⓒ 2019.</p>
+        <p>José Rafael Álvarez Espino.</p>
+    </footer>
 </body>
 
 </html>
