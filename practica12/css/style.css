@@ -6,13 +6,15 @@ body {
 #principal{
     background-image: url("../img/imagenPrincipal.jpg");
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
-    overflow: auto;
 }
 #principal>img{
     height: 32px;
     width: 32px;
+}
+.headerMostrarCasa{
+    background-color: orangered;
 }
 header>a {
     text-decoration: none;
@@ -160,6 +162,122 @@ main{
     margin: 0px;
 }
 
+#imagenes img{
+    height: 35vh;
+    width: 100%;
+}
+#botonera{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+#botonera button{
+    margin: 6px;
+    border-radius: 8px;
+    background-color: #ffc542;
+}
+#informacionPrincipal{
+    text-align: justify;
+    padding: 8px;
+}
+#informacionPrincipal h3{
+    margin-left: 0;
+}
+#informacionIconos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,32px);
+    align-items: center;
+    justify-items: center;
+}
+#informacionIconos img{
+    height: 4vh;
+    width: 23%;
+}
+#informacionIconos p{
+    font-size: 12px;
+}
+#informacionResumida,#comentarioPropietario,#actividades,#lugaresDeInteres,#localizacionCasaMapa{
+    text-align: justify;
+    padding: 8px;
+}
+#informacionResumida h3,#caracteristicasYServicios h3,#comentarioPropietario h3, #actividades h3,#lugaresDeInteres h3, #localizacionCasaMapa h3{
+    border-bottom: 1px solid gray;
+}
+#caracteristicasYServicios, #actividades{
+    text-align: justify;
+}
+#caracteristicasYServicios h3{
+    margin: 8px;
+}
+
+#localizacionCasaMapa iframe{
+    height: 300px;
+    width: 100%;
+}
+#contactoPropietario{
+    color: black;
+    padding: 8px;
+}
+#contactoPropietario h3{
+    border-bottom: 1px solid gray;
+}
+
+#contactoPropietario img{
+    height: 64px;
+    width: 64px;
+}
+#contactoPropietario div{
+    text-align: center;
+}
+#contactoPropietario button{
+    margin: 6px;
+    border-radius: 8px;
+    background-color: #ffc542;
+}
+#comentarios{
+    color: black;
+    padding: 8px;
+}
+#comentarios h3{
+    border-bottom: 1px solid gray;
+}
+#comentarios img{
+    height: 64px;
+    width: 64px;
+}
+.informacionComentario{
+    display: flex;
+    justify-content: space-around;
+}
+.comentario{
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+.nombreYValoracion{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.fechaComentario{
+    font-size: 12px;
+    font-style: italic;
+}
+.textoComentario{
+    text-align: justify;
+}
+#comentarios button{
+    margin: 6px;
+    border-radius: 8px;
+    background-color: #ffc542;
+}
 
 
 footer {
