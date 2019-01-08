@@ -16,7 +16,7 @@ body {
 }
 
 .headerMostrarCasa {
-    background-color: orangered;
+    background-color: green;
 }
 
 header>a {
@@ -147,7 +147,7 @@ main {
 
 .nombreCasa {
     margin: 12px;
-    color: orangered;
+    color: green;
 }
 
 .localizacionCasa {
@@ -190,7 +190,7 @@ main {
 }
 
 #imagenes img {
-    height: 35vh;
+    height: 300px;
     width: 100%;
 }
 
@@ -198,7 +198,7 @@ main {
 #botoneraDesktop {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 10vh;
+    grid-template-rows: 96px;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -214,6 +214,8 @@ main {
     margin: 6px;
     border-radius: 8px;
     background-color: #ffc542;
+    height: 64px;
+    width: 90%;
 }
 
 #informacionPrincipal {
@@ -234,7 +236,7 @@ main {
 }
 
 #informacionIconos img {
-    height: 4vh;
+    height: 64px;
     width: 23%;
 }
 
@@ -349,7 +351,7 @@ main {
 
 
 footer {
-    background-color: hsl(16, 100%, 50%);
+    background-color: green;
     padding: 12px;
 }
 
@@ -360,7 +362,6 @@ nav ul li {
 .topnavresponsive {
     position: relative;
     padding: 0;
-
 }
 
 .topnavresponsive li {
@@ -391,6 +392,12 @@ form input {
     border-radius: 5px;
 }
 
+form input[type="submit"]{
+    background-color: #ffc542;
+}
+
+
+
 
 
 
@@ -416,6 +423,7 @@ form input {
 
     input[type="text"],
     input[type="date"],
+    input[type="email"],
     input[type="number"],
     input[type="submit"] {
         width: 300px;
@@ -546,6 +554,7 @@ form input {
     input[type="text"],
     input[type="date"],
     input[type="number"],
+    input[type="email"],
     input[type="submit"] {
         width: 350px;
     }

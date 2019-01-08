@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#66383A">
+    <meta name="description" content="Portal de casas rurales, práctica 12">
+    <title>Práctica 12. José Rafael Álvarez Espino</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/main.js"></script>
+
+</head>
+
+<body>
+    <div id="principal">
+        <header id="myHeader">
+            <div>
+                <a href="home.html">
+                    <h1>RuralTime</h1>
+                </a>
+                <a href="#" id="abrirMenu"><i class="material-icons">menu</i></a>
+            </div>
+            <nav>
+                <ul class="topnav" id="myTopnav">
+                    <li><a href="#">Casas rurales</a></li>
+                    <li><a href="#">Guías de viaje</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h2>Busca tu escapada</h2>
+        <div id="formularioBusqueda">
+            <form action="#">
+                <input type="text" placeholder="Lugar, pueblo o ciudad">
+                <input type="date" id="fechaEntrada">
+                <input type="date" id="fechaSalida">
+                <input type="number" placeholder="Nº de huéspedes">
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+        <p>¿Tienes dudas? Deja que te recomendemos algunos sitios.</p>
+        <img src="img/flechaAbajo.svg" alt="flechaAbajo" id="flechaAbajo">
+    </div>
+    <main>
+        <section id="masVisitados">
+            <h2 id="tituloMasVisitados">Lugares más visitados este mes.</h2>
+            <div>
+                <a href="#" id="lugar1">
+                    <p>Sierra de cazorla</p>
+                </a>
+                <a href="#" id="lugar2">
+                    <p>Sierra Nevada</p>
+                </a>
+                <a href="#" id="lugar3">
+                    <p>Puentedey</p>
+                </a>
+                <a href="#" id="lugar4">
+                    <p>Torla</p>
+                </a>
+            </div>
+        </section>
+        <section id="masValoradas">
+            <h2 id="tituloMasReservadas">Casas más reservadas este mes.</h2>
+            <div id="listaCasas">
+                <a href="mostrarCasa.html" class="casa">
+
+                    <div class="imagenCasa">
+                        <img src="img/casaRural1.jpg" alt="casaRuralPrimorias">
+                    </div>
+                    <div class="informacionCasa">
+                        <h3 class="nombreCasa">Casa rural primorias.</h3>
+                        <p class="localizacionCasa">Camijanes, Cantabria.</p>
+                        <p class="capacidadCasa">Casa para 5 personas: 5 camas.</p>
+                        <p class="precioCasa">22€ por persona/noche.</p>
+                        <p class="valoracionCasa">4.7 <i class="inline-icon material-icons">start_rating</i> 370 <i
+                                class="inline-icon material-icons">comment</i></p>
+                    </div>
+
+                </a>
+                <a href="mostrarCasa.html" class="casa">
+                    <div class="imagenCasa">
+                        <img src="img/casaRural2.jpg" alt="casaRuralDiaman">
+                    </div>
+                    <div class="informacionCasa">
+                        <h3 class="nombreCasa">Casa rural Diamán.</h3>
+                        <p class="localizacionCasa">Güejar, Granada.</p>
+                        <p class="capacidadCasa">Casa para 10 personas: 8 camas.</p>
+                        <p class="precioCasa">17€ por persona/noche.</p>
+                        <p class="valoracionCasa">4.6 <i class="inline-icon material-icons">start_rating</i> 264 <i
+                                class="inline-icon material-icons">comment</i></p>
+                    </div>
+                </a>
+                <a href="mostrarCasa.html" class="casa">
+                    <div>
+                        <div class="imagenCasa">
+                            <img src="img/casaRural3.png" alt="casaRuralLaErmita">
+                        </div>
+                        <div class="informacionCasa">
+                            <h3 class="nombreCasa">Casa rural La Ermita.</h3>
+                            <p class="localizacionCasa">Cazorla, Jaén.</p>
+                            <p class="capacidadCasa">Casa para 9 personas: 8 camas.</p>
+                            <p class="precioCasa">15€ por persona/noche.</p>
+                            <p class="valoracionCasa">4.4 <i class="inline-icon material-icons">start_rating</i> 603 <i
+                                    class="inline-icon material-icons">comment</i></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mostrarCasa.html" class="casa">
+                    <div>
+                        <div class="imagenCasa">
+                            <img src="img/casaRural4.jpg" alt="casaRuralElBosque">
+                        </div>
+                        <div class="informacionCasa">
+                            <h3 class="nombreCasa">Casa rural El Bosque.</h3>
+                            <p class="localizacionCasa">Riaza, Segovia.</p>
+                            <p class="capacidadCasa">Casa para 15 personas: 12 camas.</p>
+                            <p class="precioCasa">22€ por persona/noche.</p>
+                            <p class="valoracionCasa">4.4 <i class="inline-icon material-icons">start_rating</i> 36 <i
+                                    class="inline-icon material-icons">comment</i></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Portal de casas rurales Ⓒ 2019.</p>
+        <p>José Rafael Álvarez Espino.</p>
+    </footer>
+</body>
+
+</html>

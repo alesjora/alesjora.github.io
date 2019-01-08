@@ -1,0 +1,11 @@
+MÓVIL:
+	PRINCIPAL: https://wireframe.cc/AfzxdT
+	MOSTRAR CASA: https://wireframe.cc/acDnHn
+
+TABLET: 
+	PRINCIPAL: https://wireframe.cc/lu7vGu
+	MOSTRAR CASA: https://wireframe.cc/hTb4Jj
+
+ORDENADOR:
+	PRINCIPAL: https://wireframe.cc/HUmyGX
+	MOSTRAR CASA: https://wireframe.cc/qIHecc

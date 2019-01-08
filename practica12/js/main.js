@@ -26,7 +26,6 @@
                 scrollTop: $("main").offset().top
             }, 1000);
         });
-    
     });
 
 }
