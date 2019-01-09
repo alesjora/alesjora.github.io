@@ -107,10 +107,19 @@ main {
     background-image: url("../img/torla.jpg");
 }
 
-#masValoradas>div {
+.listaCasas,
+.listaCasasFiltro {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 390px);
+}
+
+#contenedorCasasFiltro {
+    grid-area: listaCasasFiltro;
+}
+
+#filtros {
+    grid-area: filtros;
 }
 
 .casa {
@@ -385,16 +394,48 @@ form #fechaSalida::before {
     content: "Fecha salida: \0000a0";
 }
 
-form input {
+form input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+select {
     width: 88%;
     margin: 8px;
     padding: 8px;
     border-radius: 5px;
 }
 
-form input[type="submit"]{
+form input[type="submit"] {
     background-color: #ffc542;
 }
+
+#filtrosBusqueda {
+    display: none;
+}
+
+#contenedorFiltros p,
+label {
+    color: black;
+}
+
+#filtrosEspecificos {
+    text-align: left;
+    margin-left: 16px;
+}
+
+#contenedorFiltros {
+    text-align: center;
+
+}
+
+#contenedorFiltros button {
+    background-color: #ffc542;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
 
 
 
@@ -408,7 +449,8 @@ form input[type="submit"]{
         grid-template-rows: repeat(2, 200px);
     }
 
-    #masValoradas>div {
+    .listaCasas,
+    .listaCasasFiltro {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 390px);
@@ -421,15 +463,10 @@ form input[type="submit"]{
         width: 400px;
     }
 
-    input[type="text"],
-    input[type="date"],
-    input[type="email"],
-    input[type="number"],
-    input[type="submit"] {
-        width: 300px;
-    }
+    
 }
-@media screen and (min-width:728px){
+
+@media screen and (min-width:728px) {
     aside {
         display: flex;
     }
@@ -450,10 +487,12 @@ form input[type="submit"]{
         align-items: center;
         height: 83%;
     }
+
     #contactoPropietario img {
         height: 128px;
         width: 128px;
     }
+
     #imagenes {
         height: 50vh;
         width: 50%;
@@ -481,6 +520,13 @@ form input[type="submit"]{
         text-align: center;
     }
 
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width:1024px) {
     #botoneraMovil,
     #botoneraDesktop {
         grid-area: botonera;
@@ -498,7 +544,6 @@ form input[type="submit"]{
         height: 8vh;
         width: 30vh;
     }
-
     #parteSuperior {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -508,12 +553,6 @@ form input[type="submit"]{
             "imagenes botonera";
         grid-column-gap: 8px;
     }
-    footer{
-        display: flex;
-        justify-content: space-between;
-    }
-}
-@media screen and (min-width:1024px) {
     header {
         display: flex;
         justify-content: space-between;
@@ -534,7 +573,8 @@ form input[type="submit"]{
         grid-template-rows: repeat(2, 200px);
     }
 
-    #masValoradas>div {
+    .listaCasas,
+    .listaCasasFiltro {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 390px);
@@ -551,12 +591,33 @@ form input[type="submit"]{
         width: 450px;
     }
 
-    input[type="text"],
-    input[type="date"],
-    input[type="number"],
-    input[type="email"],
-    input[type="submit"] {
+    #reserva input[type="text"],
+    #reserva input[type="date"],
+    #reserva input[type="number"],
+    #reserva input[type="email"],
+    #reserva input[type="submit"] {
         width: 350px;
     }
 
+    .listaCasasFiltro {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 390px);
+
+    }
+
+    #contenedorFiltroMostrarCasas {
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: auto;
+        grid-template-areas: "filtros filtros filtros listaCasasFiltro listaCasasFiltro listaCasasFiltro listaCasasFiltro listaCasasFiltro listaCasasFiltro listaCasasFiltro";
+    }
+
+    #mostrarFiltros {
+        display: none;
+    }
+
+    #filtrosBusqueda {
+        display: block;
+    }
 }

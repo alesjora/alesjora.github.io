@@ -27,5 +27,16 @@
             }, 1000);
         });
     });
-
+    $(document).ready(function() {
+        let formularioBusqueda = $("#filtrosBusqueda");
+        $("#mostrarFiltros").click(function () {
+            if(this.innerHTML === "Mostrar filtros"){
+                formularioBusqueda.show('fadein');
+                this.innerHTML = "Ocultar filtros"
+            } else {
+                formularioBusqueda.hide('fadeout');
+                this.innerHTML = "Mostrar filtros"
+            }
+        });
+    });
 }

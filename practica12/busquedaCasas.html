@@ -7,69 +7,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#66383A">
     <meta name="description" content="Portal de casas rurales, práctica 12">
-    <title>Práctica 12. José Rafael Álvarez Espino</title>
+    <title>Búsqueda de casas</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/animationHome.js"></script>
-
 </head>
 
 <body>
-    <div id="principal">
-        <header id="myHeader">
-            <div>
-                <a href="home.html">
-                    <h1>RuralTime</h1>
-                </a>
-                <a href="#" id="abrirMenu"><i class="material-icons">menu</i></a>
-            </div>
-            <nav>
-                <ul class="topnav" id="myTopnav">
-                    <li><a href="#">Casas rurales</a></li>
-                    <li><a href="#">Guías de viaje</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Iniciar sesión</a></li>
-                </ul>
-            </nav>
-        </header>
-        <h2>Busca tu escapada</h2>
-        <div id="formularioBusqueda">
-            <form action="busquedaCasas.html">
-                <input type="text" placeholder="Lugar, pueblo o ciudad">
-                <input type="date" id="fechaEntrada">
-                <input type="date" id="fechaSalida">
-                <input type="number" placeholder="Nº de huéspedes">
-                <input type="submit" value="Buscar">
-            </form>
+    <header class="headerMostrarCasa">
+        <div>
+            <a href="home.html">
+                <h1>RuralTime</h1>
+            </a>
+            <a href="#" id="abrirMenu"><i class="material-icons">menu</i></a>
         </div>
-        <p>¿Tienes dudas? Deja que te recomendemos algunos sitios.</p>
-        <img src="img/flechaAbajo.svg" alt="flechaAbajo" id="flechaAbajo">
-    </div>
-    <main>
-        <section id="masVisitados">
-            <h2 id="tituloMasVisitados">Lugares más visitados este mes.</h2>
-            <div>
-                <a href="busquedaCasas.html" id="lugar1">
-                    <p>Sierra de cazorla</p>
-                </a>
-                <a href="busquedaCasas.html" id="lugar2">
-                    <p>Sierra Nevada</p>
-                </a>
-                <a href="busquedaCasas.html" id="lugar3">
-                    <p>Puentedey</p>
-                </a>
-                <a href="busquedaCasas.html" id="lugar4">
-                    <p>Torla</p>
-                </a>
+        <nav>
+            <ul class="topnav" id="myTopnav">
+                <li><a href="#">Casas rurales</a></li>
+                <li><a href="#">Guías de viaje</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="contenedorFiltroMostrarCasas">
+        <aside id="filtros">
+            <div id="contenedorFiltros">
+                <button id="mostrarFiltros">Mostrar filtros</button>
+                <div id="filtrosBusqueda">
+                    <form action="#">
+                        <input type="text" placeholder="Lugar, pueblo o ciudad">
+                        <input type="date" id="fechaEntrada">
+                        <input type="date" id="fechaSalida">
+                        <input type="number" placeholder="Nº de huéspedes">
+                        <select>
+                            <option value="" selected>Precio noche/persona</option>
+                            <option value="-20">Menos de 20€ /persona</option>
+                            <option value="20-30">Entre 20 y 30€ /persona</option>
+                            <option value="30-40">Entre 30 y 40€ /persona</option>
+                            <option value="+40">Más de 40€/persona</option>
+                        </select><br>
+                        <div id="filtrosEspecificos">
+                            <p>Filtros específicos:</p>
+                            <input type="checkbox" name="barbacoa" id="checkBarbacoa"><label for="barbacoa"> Barbacoa</label><br>
+                            <input type="checkbox" name="piscina" id="checkPiscina"><label for="piscina"> Piscina</label><br>
+                            <input type="checkbox" name="jacuzzi" id="checkJacuzzi"><label for="jacuzzi"> Jacuzzi</label><br>
+                            <input type="checkbox" name="mascotas" id="checkMascotas"><label for="mascotas"> Mascotas</label><br>
+                            <input type="checkbox" name="internet" id="checkInternet"><label for="internet"> Internet</label><br>
+                            <input type="checkbox" name="aireAcondicionado" id="checkAireAcondicionado"><label for="aireAcondicionado">
+                                Aire acondicionado</label><br>
+                        </div>
+                        <input type="submit" value="Filtrar">
+                    </form>
+                </div>
             </div>
-        </section>
-        <section id="masValoradas">
-            <h2 id="tituloMasReservadas">Casas más reservadas este mes.</h2>
-            <div class="listaCasas">
+        </aside>
+        <main id="contenedorCasasFiltro">
+            <div class="listaCasasFiltro">
                 <a href="mostrarCasa.html" class="casa">
 
                     <div class="imagenCasa">
@@ -129,8 +126,8 @@
                     </div>
                 </a>
             </div>
-        </section>
-    </main>
+        </main>
+    </div>
 
     <footer>
         <p>Portal de casas rurales Ⓒ 2019.</p>

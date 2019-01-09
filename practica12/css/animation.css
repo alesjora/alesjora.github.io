@@ -19,14 +19,18 @@ body{
     color:white;
     display: block;
 }
-.texto1{
+#texto1{
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 16px;
     animation: texto 3s 1;
+    animation-delay: 2s;
 }
-.texto2{
+#texto2{
     font-size: 30px;
+}
+span{
+    opacity: 0;
 }
 button {
     opacity: 0;
@@ -36,7 +40,7 @@ button {
     padding: 8px;
     animation: fadein 3s;
     font-size: 20px;
-    animation-delay: 3s;
+    animation-delay: 5s;
     margin-top: 96px;
 }
 
@@ -56,10 +60,10 @@ button {
 	}
 }
 @media screen and (min-width:728px){
-    .texto1{
+    #texto1{
         font-size: 60px;
     }
-    .texto2{
+    #texto2{
         font-size: 40px;
     }
 
@@ -69,10 +73,10 @@ button {
 }
 @media screen and (min-width:1024px) {
     
-    .texto1{
+    #texto1{
         font-size: 80px;
     }
-    .texto2{
+    #texto2{
         font-size: 60px;
     }
 
