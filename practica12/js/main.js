@@ -20,14 +20,14 @@
 
     }
 
-    $(document).ready(function() {
+    $(function() {
         $("#flechaAbajo").click(function () {
             $('html,body').animate({
                 scrollTop: $("main").offset().top
             }, 1000);
         });
     });
-    $(document).ready(function() {
+    $(function() {
         let formularioBusqueda = $("#filtrosBusqueda");
         $("#mostrarFiltros").click(function () {
             if(this.innerHTML === "Mostrar filtros"){
