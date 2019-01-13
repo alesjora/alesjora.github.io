@@ -1,6 +1,5 @@
 {
     
-
     function init(){
         let boton = document.getElementById("boton");
         setTimeout(function(){
@@ -15,10 +14,6 @@
             texto2.style.opacity = "1";
         },1999);
     }
-
-    
-
-
 
     window.addEventListener("load",init);
 }

@@ -74,6 +74,15 @@ main {
     position: relative;
     margin: 8px;
     border-radius: 8px;
+    transition-duration: 1s;
+}
+
+#masVisitados a:hover p{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#masVisitados a:hover{
+        transition-duration: 1s;
+        transform: scale(1.03);
 }
 
 #masVisitados div a p {
@@ -436,6 +445,13 @@ label {
     border-radius: 5px;
 }
 
+#reserva input:valid:not(#enviar){
+    border: 1px solid green;
+}
+#reserva input:invalid{
+    border: 1px solid red;
+}
+
 
 
 
@@ -467,7 +483,7 @@ label {
 }
 
 @media screen and (min-width:728px) {
-    aside {
+    #asideMostrarCasa {
         display: flex;
     }
 
