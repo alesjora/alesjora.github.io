@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#66383A">
+    <meta name="description" content="Portal de casas rurales, práctica 12">
+    <title>Título casa</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header class="headerMostrarCasa">
+        <div>
+            <a href="home.html">
+                <h1>RuralTime</h1>
+            </a>
+            <a href="#" id="abrirMenu"><i class="material-icons">menu</i></a>
+        </div>
+        <nav>
+            <ul class="topnav" id="myTopnav">
+                <li><a href="#">Casas rurales</a></li>
+                <li><a href="#">Guías de viaje</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="parteSuperior">
+            <div id="imagenes">
+                <img src="img/casaRural1.jpg" alt="Casa rural primorias">
+            </div>
+            <div id="botoneraDesktop">
+                <a href="reserva.html"><button>Solicitar reserva</button></a>
+                <button>Guardar en favoritos</button>
+            </div>
+            <div id="informacionPrincipalIconos">
+                <div id="informacionPrincipal">
+                    <h3 class="nombreCasa">Casa rural Primorias.</h3>
+                    <p class="localizacionCasa">Riaza, Segovia.</p>
+                    <p class="precioCasa">22€ por persona/noche.</p>
+                </div>
+                <div id="informacionIconos">
+                    <img src="img/casa.svg" alt="casa">
+                    <img src="img/capacidad.svg" alt="capacidad">
+                    <img src="img/dormitorios.svg" alt="dormitorios">
+                    <img src="img/cama.svg" alt="camas">
+                    <p>Alquiler completo</p>
+                    <p>12 personas</p>
+                    <p>6 dormitorios</p>
+                    <p>10 camas</p>
+                </div>
+            </div>
+        </div>
+        <div id="botoneraMovil">
+            <a href="reserva.html"><button>Solicitar reserva</button></a>
+            <button><i class="inline-icon material-icons">phone</i></button>
+            <button><i class="inline-icon material-icons">favorite</i></button>
+        </div>
+        <div id="informacionResumida">
+            <h3>Resumen</h3>
+            <p>La <strong>capacidad</strong> del alojamiento permite de 4 a 12 personas:</p>
+            <ul>
+                <li>2 habitaciones dobles de matrimonio.</li>
+                <li>4 habitaciones dobles.</li>
+            </ul>
+            <p><strong>Precio medio aproximado:</strong> 22 € aprox. por persona y noche </p>
+        </div>
+        <div id="caracteristicasYServicios">
+            <h3>Características y servicios</h3>
+            <ul>
+                <li><strong>Exterior:</strong> Barbacoa, zona de aparcamiento, terraza, piscina.</li>
+                <li><strong>Idiomas:</strong> Francés, español, inglés</li>
+                <li><strong>Interior:</strong> Lavadora, aire acondicionado, comedor, cocina, chimenea, televisión,
+                    calefacción, microondas, horno.</li>
+                <li><strong>Servicios:</strong> Acceso a internet.</li>
+                <li><strong>Situación:</strong> Aislada, a 5km del pueblo.</li>
+            </ul>
+        </div>
+        <div id="comentarioPropietario">
+            <h3>Comentario del propietario</h3>
+            <p>Tiene todas las comodidades necesarias para una estancia agradable sin perder el encanto tradicional y
+                la calidad rural.</p>
+            <p>Disponemos de 6 habitaciones, llegando a una capacidad máxima de 12 personas.</p>
+            <p>También disponemos de comedor/salón con aire acondicionado y calefacción, cocina completa con horno y
+                microondas, patio grande con piscina y barbacoa, tres chimeneas y televisión/DVD.</p>
+            <p>El cortijo tiene 800 m2 con patio de 200m2.</p>
+        </div>
+        <div id="actividades">
+            <h3>Actividades</h3>
+            <p>Las actividades que se pueden realizar en el cortijo y alrededores son:</p>
+            <ul>
+                <li>Piragüismo y escalada en el río.</li>
+                <li>Equitación (club del pueblo).</li>
+                <li>Sauna y masajes en el publo.</li>
+                <li>Senderismo por los diversos senderos.</li>
+            </ul>
+        </div>
+        <div id="lugaresDeInteres">
+            <h3>Lugares de interés</h3>
+            <p>Los lugares de interés más importantes de la zona que el viajero podrá descubrir son los siguientes:</p>
+            <ul>
+                <li>Plaza Mayor de Riaza.</li>
+                <li>Ayuntamiento de Riaza.</li>
+                <li>Iglesia de Nuestra Señora del Manto.</li>
+                <li>Capilla de los Linajes o de los Hidalgos y la Colección de Arte Sacro.</li>
+                <li>Ermita de San Juan.</li>
+                <li>Ermita de San Roque.</li>
+            </ul>
+        </div>
+    </main>
+    <aside id="asideMostrarCasa">
+        <div id="localizacionCasaMapa">
+            <h3>Localización</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11286.400667172626!2d-4.387285126352057!3d37.457926151973474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6d9defead2892d%3A0x46b5dc91cfdd971e!2sYacimiento+arqueol%C3%B3gico+del+Cerro+de+la+Merced!5e0!3m2!1ses!2ses!4v1546778939343"
+                allowfullscreen></iframe>
+        </div>
+        <div id="contactoPropietario">
+            <h3>Contacta con el propietario</h3>
+            <div>
+                <img src="img/perfil.png" alt="imagenPerfil">
+                <p>Enrique Adebayor Prieto</p>
+                <button>Contactar</button>
+            </div>
+        </div>
+    </aside>
+    <div id="comentarios">
+        <h3>Comentarios</h3>
+        <div class="comentario">
+            <div class="informacionComentario">
+                <img src="img/perfil.png" alt="imagenPerfil">
+                <div class="nombreYValoracion">
+                    <div class="nombreYFecha">
+                        <p>Alfonso Trujillo</p>
+                        <p class="fechaComentario">26/12/2018</p>
+                    </div>
+                    <div class="valoracionEstrellas">
+                        <p><i class="inline-icon material-icons">start_rating</i><i class="inline-icon material-icons">start_rating</i><i
+                                class="inline-icon material-icons">start_rating</i><i class="inline-icon material-icons">start_rating</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="textoComentario">
+                <h4>Estancia magnífica</h4>
+                <p>Desde el primer día Enrique estuvo atento a todo, la casa muy limpia y acogedora. Volvería a repetir
+                    sin duda.</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="informacionComentario">
+                <img src="img/perfil.png" alt="imagenPerfil">
+                <div class="nombreYValoracion">
+
+                    <div class="nombreYFecha">
+                        <p>Adrián Reyes Lucena</p>
+                        <p class="fechaComentario">26/08/2018</p>
+                    </div>
+                    <div class="valoracionEstrellas">
+                        <p><i class="inline-icon material-icons">start_rating</i><i class="inline-icon material-icons">start_rating</i><i
+                                class="inline-icon material-icons">start_rating</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="textoComentario">
+                <h4>Mejorable</h4>
+                <p>Estuve 4 días con unos amigos y todo bien, pero las camas algo incómodas y una ducha estaba rota.
+                    Por lo demás muy bien.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Portal de casas rurales Ⓒ 2019.</p>
+        <p>José Rafael Álvarez Espino.</p>
+    </footer>
+</body>
+
+</html>

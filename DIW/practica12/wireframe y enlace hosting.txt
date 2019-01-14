@@ -1,0 +1,19 @@
+MÓVIL:
+	PRINCIPAL: https://wireframe.cc/AfzxdT
+	MOSTRAR CASA: https://wireframe.cc/acDnHn
+	RESERVA: https://wireframe.cc/GpCcds
+	BUSQUEDA CASAS: https://wireframe.cc/5c9zhv
+
+TABLET: 
+	PRINCIPAL: https://wireframe.cc/lu7vGu
+	MOSTRAR CASA: https://wireframe.cc/hTb4Jj
+	RESERVA: https://wireframe.cc/vW9uyQ
+	BUSQUEDA CASAS: https://wireframe.cc/U2or04
+
+ORDENADOR:
+	PRINCIPAL: https://wireframe.cc/HUmyGX
+	MOSTRAR CASA: https://wireframe.cc/qIHecc
+	RESERVA: https://wireframe.cc/GpCcds
+	BUSQUEDA CASAS: https://wireframe.cc/9lILBK
+
+https://alesjora.github.io/DIW/practica12

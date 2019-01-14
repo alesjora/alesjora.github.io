@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#66383A">
+    <meta name="description" content="Portal de casas rurales, práctica 12">
+    <title>Título casa</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header class="headerMostrarCasa">
+        <div>
+            <a href="home.html">
+                <h1>RuralTime</h1>
+            </a>
+            <a href="#" id="abrirMenu"><i class="material-icons">menu</i></a>
+        </div>
+        <nav>
+            <ul class="topnav" id="myTopnav">
+                <li><a href="#">Casas rurales</a></li>
+                <li><a href="#">Guías de viaje</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Reseva casa Primorias</h2>
+        <form action="" id="reserva">
+            <input type="text" placeholder="Nombre" required><br>
+            <input type="text" placeholder="Apellidos" required><br>
+            <input type="email" placeholder="Correo electrónico" required><br>
+            <input type="number" placeholder="Telefono" required><br>
+            <input type="date" id="fechaEntrada" required><br>
+            <input type="date" id="fechaSalida" required><br>
+            <input type="number" placeholder="Nº de huéspedes" required><br>
+            <input type="submit" id="enviar" value="Reservar">
+        </form>
+    </main>
+    <footer>
+        <p>Portal de casas rurales Ⓒ 2019.</p>
+        <p>José Rafael Álvarez Espino.</p>
+    </footer>
+</body>
+
+</html>
