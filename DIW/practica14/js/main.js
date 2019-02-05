@@ -63,6 +63,5 @@
             $this.siblings(".cardTitle").show("fadein");
             $this.siblings(".imagenCard").show("fadeout");
         });
-
     });
 }

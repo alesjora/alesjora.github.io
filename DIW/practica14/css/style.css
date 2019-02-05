@@ -265,7 +265,7 @@ aside h2{
     text-align: center;
 }
 
-#formulario input[type="text"] {
+#formulario input[type="text"],#formulario input[type="email"] {
     width: 90%;
     background-color: #f3f3f3;
     height: 48px;
@@ -289,6 +289,7 @@ aside h2{
 }
 #formulario textarea:invalid, #formulario input:invalid{
     border: 1px solid red;
+    color: red;
 }
 #twitter{
     display: none;
@@ -305,14 +306,6 @@ footer img {
     margin: 8px;
     transition-duration: 1s;
 }
-
-textarea:valid, input:valid:not(#enviar){
-    border: 1px solid green;
-}
-textarea:invalid, input:invalid{
-    border: 1px solid red;
-}
-
 
 @media screen and (max-width:1024px) and (min-width:600px) {
     #listCard {
