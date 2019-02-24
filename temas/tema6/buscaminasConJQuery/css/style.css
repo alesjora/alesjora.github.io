@@ -8,6 +8,7 @@ h1{
     margin: 24px auto;
     text-align: center;
     font-size: 24px;
+    display: none;
 }
 p{
     margin: 24px auto;
@@ -36,7 +37,6 @@ p{
 }
 .casillaConBandera{
     background-color : yellow;
-    transition: 1.5s;
 }
 .casillaConBomba{
     background: #F96546 url(../images/bomba.png) no-repeat center;

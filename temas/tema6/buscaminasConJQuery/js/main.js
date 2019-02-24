@@ -90,6 +90,7 @@
                     break;
                 case "x":
                     mostrarTodasLasMinas();
+                    buscaminas.partidaFinalizada = true;
                     return "¡Has perdido al pulsar una mina!";
                 default:
                     if (buscaminas.tablero2[fila][columna] != -1) {
@@ -128,7 +129,6 @@
                         }
                     }
                 }
-                buscaminas.partidaFinalizada = true;
             }
 
             function obtenerValorCasilla(fila, columna) {
@@ -238,8 +238,12 @@
             }
         },
     }
+    let $contenedorBuscaminas;
+    let $muestraFinal;
+    let $marcadorBanderas;
+    let casillasMostradas = true;
 
-    function init (dificultad) {
+    function init(dificultad) {
         switch (dificultad) {
             case "facil":
                 buscaminas.init(8, 8, 10);
@@ -258,22 +262,21 @@
     function mostrar() {
         buscaminas.mostrar();
     }
-    function picar (fila, columna) {
+
+    function picar(fila, columna) {
         console.log(buscaminas.picar(fila, columna));
 
     }
-    function marcar (fila, columna) {
+
+    function marcar(fila, columna) {
         console.log(buscaminas.marcar(fila, columna));
 
     }
-    function despejar (fila, columna) {
+
+    function despejar(fila, columna) {
         console.log(buscaminas.despejar(fila, columna));
     }
 
-    let $contenedorBuscaminas;
-    let $muestraFinal;
-    let $marcadorBanderas;
-    let casillasMostradas = true;
     $(function () {
         $muestraFinal = $("#muestraFinal");
         $contenedorBuscaminas = $("#contenedorBuscaminas");
@@ -281,6 +284,8 @@
             e.preventDefault();
             if (!casillasMostradas)
                 return;
+            
+
             let [filas, columnas] = init($(this).prop("id"));
             if (filas && columnas) {
                 eliminarTableroSiExiste();
@@ -314,9 +319,14 @@
             $tabla.append($fila);
         }
         $contenedorBuscaminas.append($tabla);
+        $("#tablero").show("bounce");
     }
 
     function clickACasilla(i, j) {
+        if (buscaminas.partidaFinalizada || !casillasMostradas) 
+            return;
+
+
         if (!buscaminas.cronometro)
             buscaminas.cronometro = setInterval(mostrarReloj, 1000);
         event.preventDefault();
@@ -342,7 +352,6 @@
 
     function eliminarTableroSiExiste() {
         let $tablero = $("#tablero");
-        console.log($tablero.css("heigth"));
         if ($tablero.length)
             $tablero.remove();
         if ($marcadorBanderas)
@@ -377,38 +386,44 @@
     function mostrarCasillas() {
         let $casilla;
         let arrayCasillas = buscaminas.casillasAMostrar;
-        let clase, duracion;
+        let clase, duracion, longitudArrayCasillas;
         if (buscaminas.partidaFinalizada && buscaminas.casillasPorDescubrir != 0) {
             clase = "casillaConBomba";
-            duracion = 30;
+            duracion = 300;
         } else {
             clase = "casillaDescubierta";
             duracion = 50;
         }
-        casillasMostradas = false;
-        for (let i = 0; i < arrayCasillas.length; i++) {
-            setTimeout(function () {
-                $casilla = obtenerCasilla(arrayCasillas[i][0], arrayCasillas[i][1]);
-                $casilla.fadeIn(i * duracion + 100, function () {
-                    $(this).addClass(clase);
-                    if (arrayCasillas[i][2] !== 0 && arrayCasillas[i][2] !== "x")
-                        $(this).text(arrayCasillas[i][2]);
-                });
-            }, i * duracion + 100);
+        longitudArrayCasillas = arrayCasillas.length;
+        setCasillasMostradas(false);
+        for (let i = 0; i < longitudArrayCasillas; i++) {
+            $casilla = obtenerCasilla(arrayCasillas[i][0], arrayCasillas[i][1]);
+            $casilla.delay(i * duracion).addClass(clase, duracion, "easeOutBounce");
+            if (arrayCasillas[i][2] !== 0 && arrayCasillas[i][2] !== "x")
+                $casilla.text(arrayCasillas[i][2]);
+            // $casilla.delay(i * duracion).fadeIn(i * duracion + 100, function () {
+            //     $(this).addClass(clase,i * duracion,"easeOutBounce");
+            //     if (arrayCasillas[i][2] !== 0 && arrayCasillas[i][2] !== "x")
+            //         $(this).text(arrayCasillas[i][2]);
+            // });
         }
         buscaminas.casillasAMostrar = [];
-        comprobarFinalPartida(arrayCasillas.length * duracion + 500);
+        comprobarFinalPartida(longitudArrayCasillas * duracion + 1000);
+        
         setTimeout(function () {
-            casillasMostradas = true;
-        }, arrayCasillas.length * duracion + 600);
+            setCasillasMostradas(true)
+        }, longitudArrayCasillas * duracion + 1500);
+    }
 
+    function setCasillasMostradas(valor){
+        casillasMostradas = valor
     }
 
     function mostrarBandera(fila, columna) {
         if (buscaminas.tablero2[fila][columna] == "B")
-            obtenerCasilla(fila, columna).addClass("casillaConBandera");
+            obtenerCasilla(fila, columna).addClass("casillaConBandera", 500, "easeInOutBounce");
         else
-            obtenerCasilla(fila, columna).removeClass("casillaConBandera");
+            obtenerCasilla(fila, columna).removeClass("casillaConBandera", 500, "easeOutExpo");
         $marcadorBanderas.text("Banderas disponibles: " + buscaminas.banderas);
     }
 
@@ -434,6 +449,7 @@
             setTimeout(function () {
                 $muestraFinal.css("background-color", color);
                 $muestraFinal.show(efecto);
+                //casillasMostradas = true;
             }, tiempo);
         }
     }
