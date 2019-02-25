@@ -5,6 +5,7 @@
         let items;
         let $mostrarAlumnos = $("#mostrarAlumnos");
         $("#inputNombre").on("input",function () {
+            $mostrarAlumnos.empty();
             items = [];
             datos = $(this).val().trim();
             if(datos.length === 0){
