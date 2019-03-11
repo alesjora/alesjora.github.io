@@ -1,0 +1,377 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+header,
+footer {
+    background-color: #2B313D;
+    color: white;
+}
+
+header>a {
+    text-decoration: none;
+}
+
+header h1 {
+    margin-left: 8px;
+}
+
+header>div {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding: 16px;
+}
+
+header h3 {
+    margin: 0;
+    display: inline;
+}
+
+header>div i {
+    display: inline;
+}
+
+header>div a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    padding: 4px;
+    display: none;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    font-weight: bold;
+}
+
+nav ul li {
+    display: none;
+}
+
+.topnavresponsive {
+    position: relative;
+    padding: 0;
+
+}
+
+.topnavresponsive li {
+    margin: 8px;
+    display: block;
+    text-align: center;
+    border: 1px solid white;
+}
+
+#principal {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#principal img {
+    height: 200px;
+    width: 200px;
+}
+
+.arrow_box {
+    position: relative;
+    background: #f27254;
+    border: 4px solid #262C35;
+}
+
+.arrow_box:after,
+.arrow_box:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.arrow_box:after {
+    border-color: rgba(242, 114, 84, 0);
+    border-top-color: #f27254;
+    border-width: 20px;
+    margin-left: -20px;
+}
+
+.arrow_box:before {
+    border-color: rgba(38, 44, 53, 0);
+    border-top-color: #262C35;
+    border-width: 26px;
+    margin-left: -26px;
+}
+
+section {
+    text-align: justify;
+    padding: 8px;
+}
+
+section h2 {
+    text-align: center;
+}
+
+#sobreMi p {
+    font-weight: 200;
+}
+
+.class_background:nth-child(even) {
+    background-color: #2B313D;
+    color: #D4CEC2;
+    box-shadow: 0 0.325em 0 #fff;
+}
+
+.class_background:nth-child(odd) {
+    background-color: #F7F7F7;
+    color: #666666;
+    border-bottom: 0.0625em solid #fff;
+    box-shadow: 0 0.25em 0 #bdbdbd
+}
+
+#skills div div {
+    box-sizing: border-box
+}
+
+#skills>div {
+    text-align: center;
+}
+
+.containerSkill {
+    width: 100%;
+    background-color: #ddd;
+}
+
+.skills {
+    text-align: right;
+    padding: 10px;
+    color: white;
+}
+
+.p90 {
+    width: 90%;
+    background-color: #4CAF50;
+}
+
+.p80 {
+    width: 80%;
+    background-color: #2196F3;
+}
+
+.p60 {
+    width: 60%;
+    background-color: rgb(255, 166, 0);
+}
+
+.p70 {
+    width: 70%;
+    background-color: rgb(82, 170, 243);
+}
+
+.p30 {
+    width: 30%;
+    background-color: rgb(255, 56, 56);
+}
+
+.p10 {
+    width: 20%;
+    background-color: rgb(250, 28, 28);
+}
+
+#listCard {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 16px;
+}
+
+.card_item {
+    box-shadow: 0 3px 6px rgba(3, 38, 14, 0.16), 0 3px 6px rgba(5, 51, 19, 0.23);
+    position: relative;
+    height: 100%;
+
+}
+
+.enlaceCardItem {
+    text-decoration: none;
+    height: 100%;
+}
+
+.cardTitle {
+    color: #D4CEC2;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgba(43, 49, 61, 0.6);
+    margin: 0;
+    width: 100%;
+}
+
+.more {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    height: 24px;
+    width: 24px;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    height: 24px;
+    width: 24px;
+    display: none;
+}
+
+.imagenCard {
+    height: 100%;
+    width: 100%;
+}
+
+.resumen {
+    height: 96%;
+    background-color: #F7F7F7;
+    color: #666666;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    display: none;
+}
+
+.resumen h2 {
+    margin-top: 0;
+}
+aside{
+    padding: 8px;
+}
+aside h2{
+    text-align: center
+}
+#formulario {
+    text-align: center;
+}
+
+#formulario input[type="text"],#formulario input[type="email"] {
+    width: 90%;
+    background-color: #f3f3f3;
+    height: 48px;
+    margin-bottom: 30px;
+}
+
+#formulario input,
+#formulario textarea {
+    font-size: 16px;
+    font-weight: 100;
+    border-radius: 3px;
+    padding: 6px 15px;
+    border: 1px solid #666666;
+    margin-bottom: 15px;
+    background: transparent;
+    color: gray;
+    width: 90%;
+}
+#formulario textarea:valid, #formulario input:valid:not(#enviar){
+    border: 1px solid green;
+}
+#formulario textarea:invalid, #formulario input:invalid{
+    border: 1px solid red;
+    color: red;
+}
+#twitter{
+    display: none;
+}
+
+footer {
+    padding: 8px;
+    text-align: center;
+}
+
+footer img {
+    height: 48px;
+    width: 48px;
+    margin: 8px;
+    transition-duration: 1s;
+}
+
+@media screen and (max-width:1024px) and (min-width:600px) {
+    #listCard {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2, 200px);
+        grid-gap: 16px;
+    }
+    #listSkills {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5, 100px);
+        grid-gap: 16px;
+    }
+    form {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #abrirMenu {
+        display: none;
+    }
+
+    .topnavresponsive li {
+        display: inline-block;
+        border: none;
+    }
+
+    nav ul li {
+        display: inline-block
+    }
+    #listCard {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(1, 200px);
+        grid-gap: 16px;
+    }
+    #listSkills {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3, 100px);
+        grid-gap: 16px;
+    }
+    aside>div{
+        display: flex;
+        padding: 8px;
+    }
+    
+    #twitter{
+        flex-basis: 49%;
+        text-align: center;
+        display: block;
+    }
+    #twitter iframe{
+        margin: 16px;
+    }
+    #formulario {
+        margin: 0 auto;
+        flex-basis: 49%;
+    }
+    
+}

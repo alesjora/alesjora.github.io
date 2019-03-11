@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/main.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html">
+                <h3>José Rafael Álvarez</h3>
+            </a>
+            <a href="#" id="abrirMenu"><i class="material-icons">menu</i></a>
+        </div>
+        <nav>
+            <ul class="topnav" id="myTopnav">
+                <li><a href="#" id="a-sobreMi">Sobre mí</a></li>
+                <li><a href="#" id="a-skills">Habilidades</a></li>
+                <li><a href="#" id="a-proyectos">Proyectos</a></li>
+                <li><a href="#" id="a-contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="principal" class="arrow_box">
+            <img src="img/perfil.png" alt="imagen perfil">
+            <h2>José Rafael Álvarez Espino</h2>
+            <p>Desarrollador web.</p>
+        </section>
+        <section id="sobreMi" class="class_background">
+            <h2>Sobre mí</h2>
+            <p>Soy José Rafael Álvarez Espino y soy un apasionado por la informática y de las nuevas tecnologías.
+                Realizé el grado medio de sistemas microinformáticos y redes en el IES Vicente Nuñez y actualmente
+                estoy realizando el grado superior de desarrollo web en el IES Gran Capitán.</p>
+            <p>En mi tiempo libre, aparte de seguir formándome en el mundo de la informática, me gusta hacer deporte.
+                Además, desde pequeño me interesé por la astronomía, de la que intento aprender todo lo posible.</p>
+        </section>
+        <section id="skills" class="class_background">
+            <h2>Habilidades</h2>
+            <div id="listSkills">
+                <div>
+                    <p>HTML</p>
+                    <div class="containerSkill">
+                        <div class="skills p90">90%</div>
+                    </div>
+                </div>
+                <div>
+                    <p>CSS</p>
+                    <div class="containerSkill">
+                        <div class="skills p70">70%</div>
+                    </div>
+                </div>
+                <div>
+                    <p>JavaScript</p>
+                    <div class="containerSkill">
+                        <div class="skills p60">60%</div>
+                    </div>
+                </div>
+                <div>
+                    <p>PHP</p>
+                    <div class="containerSkill">
+                        <div class="skills p60">60%</div>
+                    </div>
+                </div>
+                <div>
+                    <p>Symfony</p>
+                    <div class="containerSkill">
+                        <div class="skills p10">10%</div>
+                    </div>
+                </div>
+                <div>
+                    <p>SQL</p>
+                    <div class="containerSkill">
+                        <div class="skills p70">70%</div>
+                    </div>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <div class="containerSkill">
+                        <div class="skills p60">60%</div>
+                    </div>
+                </div>
+                <div>
+                    <p>Java</p>
+                    <div class="containerSkill">
+                        <div class="skills p60">60%</div>
+                    </div>
+                </div>
+                <div>
+                    <p>jQuery</p>
+                    <div class="containerSkill">
+                        <div class="skills p30">30%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="proyectos" class="class_background">
+            <h2>Proyectos</h2>
+            <div id="listCard">
+                <a href="https://alesjora.github.io/DIW/practica12/" class="enlaceCardItem">
+                    <div id="card1" class="card_item">
+                        <img class="imagenCard" src="img/ruraltime.png" alt="RuralTime">
+                        <img class="more" src="img/icon_more.png" alt="Ver más">
+                        <img class="close" src="img/icon_close.png" alt="Cerrar">
+                        <p class="cardTitle">Casas rurales</p>
+                        <div class="resumen">
+                            <h2>Casas rurales</h2>
+                            <p>Proyecto para la asignatura Desarrollo de Interfaces Web donde realizamos la maquetación
+                                de un portal de casas rurales.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://alesjora.github.io/DIW/practica11/" class="enlaceCardItem">
+                    <div id="card2" class="card_item">
+                        <img class="imagenCard" src="img/gestorDeTareas.png" alt="Gestor de tareas">
+                        <img class="more" src="img/icon_more.png" alt="Ver más">
+                        <img class="close" src="img/icon_close.png" alt="Cerrar">
+                        <p class="cardTitle">Gestor de tareas</p>
+                        <div class="resumen">
+                            <h2>Gestor de tareas</h2>
+                            <p>Proyecto para la asignatura Desarrollo de Interfaces Web donde realizamos la maquetación
+                                de
+                                un gestor de tareas.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://alesjora.github.io/temas/tema6/buscaminasConJQuery/" class="enlaceCardItem">
+                    <div id="card2" class="card_item">
+                        <img class="imagenCard" src="img/buscaminas.png" alt="Buscaminas con jQuery">
+                        <img class="more" src="img/icon_more.png" alt="Ver más">
+                        <img class="close" src="img/icon_close.png" alt="Cerrar">
+                        <p class="cardTitle">Buscaminas con jQuery</p>
+                        <div class="resumen">
+                            <h2>Buscaminas</h2>
+                            <p>Ejercicio para la asignatura Desarrollo Web en Entorno Cliente donde realizamos con
+                                JavaScript y jQuery un buscaminas de 3 niveles de dificultad.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <aside id="contacto" class="class_background">
+        <h2>Contacto</h2>
+        <div>
+            <div id="formulario">
+                <form id="formulario">
+                    <input type="text" placeholder="Nombre" id="nombre" name="name" required>
+                    <input type="email" placeholder="Email" id="email" name="email" required>
+                    <input type="text" placeholder="Asunto" id="asunto" name="asunto" required>
+                    <textarea name="message" id="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                    <input type="submit" value="Enviar mensaje" id="enviar">
+                </form>
+            </div>
+            <div id="twitter">
+                <p>¿Prefieres preguntarme algo por twitter? ¡Estaré encantado de responderte!</p>
+                <a href="https://twitter.com/jraespino?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Sígueme en twitter</a>
+                <a href="https://twitter.com/intent/tweet?screen_name=jraespino&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-size="large" data-show-count="false">Escríbeme algo</a><br>
+                <a class="twitter-timeline" data-height="300" data-width="300" data-theme="dark" href="https://twitter.com/jraespino?ref_src=twsrc%5Etfw">Tweets
+                    by jraespino</a>
+            </div>
+        </div>
+    </aside>
+    <footer>
+        <p>José Rafael Álvarez Espino</p>
+        <div id="redesSociales">
+            <a href="https://twitter.com/jraespino"><img src="img/twitter.svg" alt="twitter"></a>
+            <a href="https://github.com/alesjora"><img src="img/github.svg" alt="github"></a>
+            <a href="#"><img src="img/linkedin.svg" alt="linkedin"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
